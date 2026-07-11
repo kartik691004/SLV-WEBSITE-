@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "nodemon src/server.ts",
     "build": "tsc",
+    "vercel-build": "npm --prefix frontend install && npm --prefix frontend run build",
     "start": "node dist/server.js",
     "check": "tsc --noEmit && node scripts/production-check.mjs"
   },
