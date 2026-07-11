@@ -15,7 +15,7 @@ export default function AdminLoginPage({ setPage }) {
             setLoading(true);
             await login(form.email, form.password);
         } catch (err) {
-            setError(err.response?.data?.message || 'Invalid credentials. Try admin@slv.com / admin123');
+            setError(err.response?.data?.message || 'Invalid credentials.');
         } finally {
             setLoading(false);
         }
@@ -141,9 +141,7 @@ export default function AdminLoginPage({ setPage }) {
                     {loading ? 'Signing In...' : 'Sign In to Dashboard'}
                 </motion.button>
 
-                <p style={{ textAlign: 'center', fontSize: '0.75rem', color: 'var(--ivory-4)', marginTop: 'var(--sp-2)' }}>
-                    Hint: admin@slv.com / admin123
-                </p>
+
 
                 {/* Back to site */}
                 <div style={{ textAlign: 'center', marginTop: 'var(--sp-5)' }}>
